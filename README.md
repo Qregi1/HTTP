@@ -13,3 +13,6 @@ HTTP服务器工作流程
    (6) 在子进程中，把 STDOUT 重定向到 cgi的写入端，把 STDIN 重定向到 cgi的读取端，关闭 cgi_input 的写入端 和 cgi_output 的读取端，设置 REQUEST_METHOD的环境变量，GET 的话设置QUERY_STRING的环境变量，POST 的话设置CONTENT_LENGTH的环境变量，这些环境变量都是为了给 cgi 脚本调用，接着用 execl 运行 cgi 程序.
    
    (7) 在父进程中,如果是 POST 请求的话，把body部分数据读取然后写入管道,把动态生成页面交给子进程处理,然后构造HTTP服务器响应的首行,最后再等待子进程
+//在线简历图片演示
+![图片1](https://github.com/Qregi1/HTTP/blob/master/Snipaste_2018-09-09_08-45-23.png)
+![图片2]()
